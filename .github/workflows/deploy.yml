@@ -49,8 +49,8 @@ jobs:
         run: ionic integrations enable capacitor
       # - name: ionic cap add android
       #   run: ionic cap add android
-      - name: ionic cap sync android
-        run: ionic cap sync android
+      - name: ionic cap sync android and ios
+        run: ionic cap sync android ios
       - name: Build the Ionic app
         run: ionic build --prod # Build the app using Ionic CLI
       - name: Setup Pages
