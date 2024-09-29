@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change to your default branch if different
+      - main # Change to your default branch if different
 
 jobs:
   build:
@@ -16,17 +16,19 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16' # Use the appropriate Node.js version
+          node-version: "16" # Use the appropriate Node.js version
+
+      - name: Install Ionic CLI
+        run: npm install -g @ionic/cli
 
       - name: Install Dependencies
         run: npm install
 
       - name: Build the Ionic app
-        run: npm run build -- --prod  # Use the correct build command
+        run: ionic build --prod # Build the app using Ionic CLI
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # Adjust if necessary
-
+          publish_dir: ./www # The default output directory for Ionic
