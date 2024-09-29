@@ -47,6 +47,8 @@ jobs:
         run: npm install
       - name: ionic integrations enable capacitor
         run: ionic integrations enable capacitor
+      - name: ionic cap add android
+        run: ionic cap add android
       - name: ionic cap sync android
         run: ionic cap sync android
       - name: Build the Ionic app
