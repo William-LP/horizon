@@ -114,7 +114,7 @@ const App: React.FC = () => {
 
 	return (
 		<div className="container">
-			<h1>Gyroscope App</h1>
+			<h1>Sound Horizon</h1>
 			{!isStarted && (
 				<button onClick={initializeAudioContext}>
 					Start Gyroscope & Sound
