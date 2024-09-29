@@ -45,6 +45,8 @@ jobs:
         run: npm install -g @ionic/cli
       - name: Install Dependencies
         run: npm install
+      - name: Install capacitor
+        run: ionic integrations enable capacitor
       - name: Build the Ionic app
         run: ionic build --prod # Build the app using Ionic CLI
       - name: Setup Pages
